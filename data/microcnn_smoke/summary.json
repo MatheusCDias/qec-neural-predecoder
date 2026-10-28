@@ -1,0 +1,26 @@
+{
+  "distance": 3,
+  "noise_rate": 0.005,
+  "shots": 1024,
+  "training_shots": 819,
+  "validation_shots": 205,
+  "seed": 314159,
+  "device": "cpu",
+  "num_local_mechanisms": 218,
+  "num_trainable_parameters": 13101,
+  "final_epoch": {
+    "epoch": 2,
+    "train_focal_bce": 0.03153933185551848,
+    "validation_focal_bce": 0.022088958881795406,
+    "predicted_mechanisms_per_shot": 0.0,
+    "predicted_mechanism_rate": 0.0,
+    "sparsification_rate": 1.0,
+    "target_mechanism_rate": 0.0034012083240098456,
+    "mechanism_precision": 0.0,
+    "mechanism_recall": 0.0,
+    "baseline_p_L_dem_validation": 0.014634146341463415,
+    "hybrid_p_L_dem_validation": 0.014634146341463415
+  },
+  "history_csv": "data\\microcnn_smoke\\history.csv",
+  "checkpoint": "data\\microcnn_smoke\\microcnn_d3.pt"
+}

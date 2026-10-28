@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dados brutos e binários volumosos
+*.npz
+*.npy
+*.dem
+
+# Modelos PyTorch / Checkpoints
+*.pt
+*.pth
+*.onnx
+
+# Saídas temporárias de notebooks
+.ipynb_checkpoints/

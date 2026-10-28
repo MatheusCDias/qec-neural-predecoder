@@ -1,0 +1,36 @@
+{
+  "distance": 3,
+  "noise_rate": 0.005,
+  "shots": 10000,
+  "training_shots": 8000,
+  "validation_shots": 2000,
+  "seed": 314159,
+  "device": "cpu",
+  "num_local_mechanisms": 218,
+  "num_trainable_parameters": 13101,
+  "final_epoch": {
+    "epoch": 20,
+    "train_focal_bce": 0.0007692083690926665,
+    "validation_focal_bce": 0.0009077253198483959,
+    "predicted_mechanisms_per_shot": 0.92,
+    "predicted_mechanism_rate": 0.004220183486238532,
+    "sparsification_rate": 0.9957798165137615,
+    "target_mechanism_rate": 0.003676605504587156,
+    "mechanism_precision": 0.6608695652173913,
+    "mechanism_recall": 0.7585776668746101,
+    "baseline_p_L": 0.0235,
+    "hybrid_p_L": 0.0245
+  },
+  "circuit_validation": {
+    "predicted_mechanisms_per_shot": 0.9875,
+    "predicted_mechanism_rate": 0.004529816513761468,
+    "sparsification_rate": 0.9954701834862385,
+    "target_mechanism_rate": null,
+    "mechanism_precision": null,
+    "mechanism_recall": null,
+    "baseline_p_L": 0.0215,
+    "hybrid_p_L": 0.0245
+  },
+  "history_csv": "data\\microcnn_d3\\history.csv",
+  "checkpoint": "data\\microcnn_d3\\microcnn_d3.pt"
+}
