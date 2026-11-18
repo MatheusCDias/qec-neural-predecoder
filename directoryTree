@@ -1,0 +1,25 @@
+qec-neural-predecoder/
+├── configs/                  # Arquivos de configuração dos experimentos (YAML/JSON)
+├── data/                     # [Pasta indicada] Datasets simulados (Stim), matrizes DEM e resultados
+│   ├── raw/                  # Síndromes brutas e DEMs extraídos
+│   ├── processed/            # Tensores 3D e dados pré-processados (PCA/UMAP)
+│   └── results/              # Métricas salvas (CSVs de p_L, latência e gráficos)
+├── docs/                     # Diagramas de arquitetura (Fluxograma Mermaid, Diagrama de Classes)
+├── notebooks/                # [Pasta indicada] Jupyter Notebooks para análise exploratória, gráficos e protótipos
+├── src/                      # [Pasta indicada] Código-fonte estruturado com alta coesão
+│   ├── quantum/              # Simulação de circuitos Stim, DEM e mapeamento 3D (x, y, t)
+│   ├── preprocessing/        # [Padrão Strategy] Normalização, Padronização, PCA, UMAP e Pipeline
+│   ├── models/               # [Padrão Factory Method + Adapter]
+│   │   ├── base.py           # Contrato único (BasePreDecoder)
+│   │   ├── factory.py        # Criador abstrato e subclasses (CNN, GNN, SKL, Transformer)
+│   │   ├── adapters.py       # Adapter de tensor (B, AM, D) para matriz tabular (L, C)
+│   │   ├── cnn.py            # Implementação concreta CNN
+│   │   ├── gnn.py            # Implementação concreta GNN
+│   │   ├── sklearn_model.py  # Implementação concreta Scikit-Learn (usa o Adapter)
+│   │   └── transformer.py    # Implementação concreta Transformer
+│   ├── decoders/ x           # Decodificador clássico PyMatching v2 (Baseline e Residual)
+│   └── pipeline/             # Orquestrador ponta a ponta que conecta as etapas e calcula métricas
+├── tests/                    # Testes unitários para validar cada módulo isoladamente
+├── .gitignore                # Ignora binários pesados em data/raw/, pesos .pt e .venv/
+├── pyproject.toml            # Metadados e dependências do projeto
+└── README.md                 # Documentação principal com os diagramas
